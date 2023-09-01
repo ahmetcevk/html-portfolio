@@ -1,0 +1,127 @@
+/*****************************/
+    /* GENERAL COMPONENTS*/
+/*****************************/
+
+.container{
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid{
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+.grid--2--cols{
+  grid-template-columns: repeat(2,1fr);
+}
+.grid--3--cols{
+  grid-template-columns: repeat(3,1fr);
+}
+.grid--4--cols{
+  grid-template-columns: repeat(4,1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.heading-primary , .heading-secondary ,
+.heading-tertiary {
+  color: #333;
+  font-weight:700; 
+  letter-spacing: -0.5px;
+}
+
+.heading-primary{
+  font-size:5.2rem;
+  line-height:1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary{
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+ font-size: 3rem;
+ line-height: 1.2;
+ margin-bottom: 3.2rem;
+}
+
+.subheading{
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #cf711f;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn:link , .btn:visited{
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  display: inline-block;
+  /*put the transition on background color*/
+  transition:all 0.3s;
+}
+
+.btn--full:link , .btn--full:visited{
+  background-color:#e67e22 ;
+  color: #fff;
+}
+
+.btn--full:active , .btn--full:hover{
+background-color: #cf711f;
+}
+
+.btn--outline:link , .btn--outline:visited{
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:active, .btn--outline:hover{
+  box-shadow: inset 0 0 0 3px #fff;
+  background-color:#fdf2e9 ;
+
+  /*trick is not to use border in order to not jump*/
+  /* trick to add border inside*/
+}
+
+.margin-right-sm{
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text { 
+  text-align: center;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.link:link , .link:visited {
+  display: inline-block;
+  color: #cf711f;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.3s;
+  padding-bottom: 2px;
+}
+
+.link:hover , .link:active {
+  /* alttaki de aynı zamanda hoplamayı engelletir*/
+  border-bottom: 1px solid transparent;
+  color: #cf711f;
+}
