@@ -12,12 +12,19 @@
   row-gap: 9.6rem;
   column-gap: 6.4rem;
 }
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--2--cols{
   grid-template-columns: repeat(2,1fr);
 }
+
 .grid--3--cols{
   grid-template-columns: repeat(3,1fr);
 }
+
 .grid--4--cols{
   grid-template-columns: repeat(4,1fr);
 }
@@ -61,7 +68,9 @@
   letter-spacing: 0.75px;
 }
 
-.btn:link , .btn:visited{
+.btn,
+.btn:link , 
+.btn:visited{
   font-weight: 600;
   font-size: 2rem;
   text-decoration: none;
@@ -70,6 +79,9 @@
   display: inline-block;
   /*put the transition on background color*/
   transition:all 0.3s;
+/* only necessary for btn*/
+  border: none;
+  cursor: pointer;
 }
 
 .btn--full:link , .btn--full:visited{
@@ -94,21 +106,48 @@ background-color: #cf711f;
   /* trick to add border inside*/
 }
 
-.margin-right-sm{
-  margin-right: 1.6rem !important;
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+
 }
 
-.margin-bottom-md {
-  margin-bottom: 4.8rem !important;
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
 }
 
-.center-text { 
-  text-align: center;
+*:focus {
+ outline: none;
+ /* outline: 4px dotted #e67e22; */
+ /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
+}
+
+.btn--form {
+ background-color: #45260a;
+ color: #fdf2e9;
+ align-self: flex-end;
+ padding: 1.2rem; 
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link , .link:visited {
@@ -123,5 +162,23 @@ background-color: #cf711f;
 .link:hover , .link:active {
   /* alttaki de aynı zamanda hoplamayı engelletir*/
   border-bottom: 1px solid transparent;
-  color: #cf711f;
+  color: #cf711f
 }
+  
+         /*Helper Setting Classes*/
+
+    .margin-right-sm{
+        margin-right: 1.6rem !important;
+    }
+      
+    .margin-bottom-md {
+        margin-bottom: 4.8rem !important;
+    }
+      
+    .center-text { 
+        text-align: center;
+    }
+      
+    .strong {
+        font-weight: 500;
+    }
